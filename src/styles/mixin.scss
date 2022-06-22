@@ -1,0 +1,183 @@
+@import './var.scss';
+
+// 防止文字溢出， 超出部分“...”
+.text_overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 防止文字溢出， 超出部分“...”
+@mixin text_overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin scrollBar {
+  &::-webkit-scrollbar-track-piece {
+    background: #d3dce6;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #99a9bf;
+    border-radius: 20px;
+  }
+}
+
+@mixin relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin pct($pct) {
+  width: #{$pct};
+  position: relative;
+  margin: 0 auto;
+}
+
+@mixin triangle($width, $height, $color, $direction) {
+  $width: $width/2;
+  $color-border-style: $height solid $color;
+  $transparent-border-style: $width solid transparent;
+  height: 0;
+  width: 0;
+
+  @if $direction==up {
+    border-bottom: $color-border-style;
+    border-left: $transparent-border-style;
+    border-right: $transparent-border-style;
+  }
+
+  @else if $direction==right {
+    border-left: $color-border-style;
+    border-top: $transparent-border-style;
+    border-bottom: $transparent-border-style;
+  }
+
+  @else if $direction==down {
+    border-top: $color-border-style;
+    border-left: $transparent-border-style;
+    border-right: $transparent-border-style;
+  }
+
+  @else if $direction==left {
+    border-right: $color-border-style;
+    border-top: $transparent-border-style;
+    border-bottom: $transparent-border-style;
+  }
+}
+
+/* flex 布局的row, 左右两端对齐 */
+.flex_end {
+  display: flex;
+  justify-content: end;
+}
+
+/* 排印： 文字左侧附带蓝色竖线 */
+.typography_vertical_line_title {
+  padding-left: 12px;
+  margin-bottom: 10px;
+  height: 20px;
+  line-height: 20px;
+  border-left: 4px solid $primaryColor;
+  font-size: $fonts-14;
+  font-weight: 700;
+}
+
+/* 红色 星标 提示 */
+.red_star {
+  position: relative;
+  padding-left: 8px;
+
+  &::after {
+    position: absolute;
+    left: 0;
+    content: '*';
+    color: $red;
+    font-size: $fonts-14;
+    font-weight: 700;
+  }
+}
+// 不同状态: 文字及标识圆点的颜色设置
+.status_cell {
+  .red {
+    position: relative;
+    padding-left: 14px;
+    font-size: $fonts-14;
+    color: $fontc-gray;
+
+    &::after {
+      position: absolute;
+      content: '.';
+      top: -18px;
+      left: -4px;
+      height: inherit;
+      font-size: 60px;
+      color: $red;
+    }
+
+    .icon {
+      display: inline-block;
+      font-size: 60px;
+      color: $red;
+    }
+  }
+
+  .green {
+    position: relative;
+    padding-left: 14px;
+    font-size: $fonts-14;
+    color: $fontc-gray;
+
+    &::after {
+      position: absolute;
+      content: '.';
+      top: -18px;
+      left: -4px;
+      height: inherit;
+      font-size: 60px;
+      color: $green;
+    }
+
+    .icon {
+      display: inline-block;
+      font-size: 60px;
+      color: $green;
+    }
+  }
+}
+
+/*
+ * 更改switch-button样式
+ */
+.my_swicth_btn {
+  span {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .el-switch__core {
+    width: 28px !important;
+  }
+}
+
+/*
+ *
+ */
+.cell_blue {
+  color: $primaryColor;
+}
+

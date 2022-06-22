@@ -1,0 +1,402 @@
+@import './var.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+@import './btn.scss';
+
+body, h1, h2, h3, h4, h5, h6, hr, p,
+blockquote,
+dl, dt, dd, ul, ol, li,
+pre, 
+form, fieldset, legend, button, input, textarea,
+th, td,
+img {
+  border: medium none;
+  margin: 0;
+  padding: 0;
+}
+
+#app, body, html {
+  height: 100%;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  font-family: $font-family;
+  color: #515a6e;
+  font-size: 14px;
+  background-color: #f7f7f7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.padding-content {
+  padding: 4px 0;
+}
+
+a {
+  color: #2d8cf0;
+  background: transparent;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  transition: color .2s ease;
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+a:hover {
+  color: #57a3f3;
+}
+
+a:active {
+  color: #2b85e4;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.pr-5 {
+  padding-right: 5px;
+}
+
+.pl-5 {
+  padding-left: 5px;
+}
+
+.block {
+  display: block;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.inlineBlock {
+  display: block;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+aside {
+  background: #eef1f6;
+  padding: 8px 24px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  display: block;
+  line-height: 32px;
+  font-size: 16px;
+  font-family: $font-family;
+  color: #2c3e50;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+//main-container全局样式
+.app-container {
+  padding: 20px;
+}
+
+.components-container {
+  margin: 30px 50px;
+  position: relative;
+}
+
+.pagination-container {
+  margin-top: 30px;
+}
+
+.text-center {
+  text-align: center
+}
+
+.sub-navbar {
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  width: 100%;
+  text-align: right;
+  padding-right: 20px;
+  transition: 600ms ease position;
+  background: linear-gradient(90deg, rgba(32, 182, 249, 1) 0%, rgba(32, 182, 249, 1) 0%, rgba(33, 120, 241, 1) 100%, rgba(33, 120, 241, 1) 100%);
+
+  .subtitle {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  &.draft {
+    background: #d0d0d0;
+  }
+
+  &.deleted {
+    background: #d0d0d0;
+  }
+}
+
+.link-type,
+.link-type:focus {
+  color: #337ab7;
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(32, 160, 255);
+  }
+}
+
+.filter-container {
+  padding-bottom: 10px;
+
+  .filter-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 10px;
+  }
+}
+
+//refine vue-multiselect plugin
+.multiselect {
+  line-height: 16px;
+}
+
+.multiselect--active {
+  z-index: 1000 !important;
+}
+
+// 列表展示项 控制
+.module_column_config {
+  li {
+    height: 32px;
+  }
+}
+// dialog改造
+.module_inner_dialog {
+  padding: 14px;
+  // height: calc(100% - 50px);
+  height: 100%;
+  overflow: auto;
+  .last_row {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  // .el-collapse {
+  //   padding: 16px;
+  //   height: auto;
+  //   overflow: auto;
+  // }
+}
+.module_split_fixed_pane {
+  display: flex;
+  flex-direction: row;
+  height: calc(100% - 32px);
+  .module_split_pane {
+    width: calc(100% - 30px);
+  }
+}
+/* ########################################## 自定义原生 Chrome 滚动条 START ############################################### */
+// 整个滚动条
+$scrollbar-w-h: 8px;
+
+::-webkit-scrollbar {
+  width: $scrollbar-w-h;
+  height: $scrollbar-w-h;
+}
+
+// 滚动条上的滚动滑块
+::-webkit-scrollbar-thumb {
+  height: 10px;
+  -webkit-transform: rotate3d(0, 0, 0, 0);
+  transform: rotate3d(0, 0, 0, 0);
+  transition: background-color 100ms ease-out;
+  background-color: rgba($mainColor, 0.2);
+  border-radius: 20px;
+
+  &:vertical,
+  &:horizontal {
+    width: $scrollbar-w-h;
+    height: $scrollbar-w-h;
+  }
+
+  &:hover {
+    background-color: rgba($mainColor, 0.5);
+    width: 14px;
+  }
+}
+
+// 滚动条轨道.
+::-webkit-scrollbar-track {}
+
+// 滚动条没有滑块的轨道部分.
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+}
+
+// 当同时有垂直滚动条和水平滚动条时交汇的部分
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+// 某些元素的corner部分的部分样式(例:textarea的可拖动按钮)
+::-webkit-resizer {}
+
+// swiper_scrollbar 样式
+.swiper-scrollbar-drag {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: rotate3d(0, 0, 0, 0);
+  transform: rotate3d(0, 0, 0, 0);
+  transition: background-color 100ms ease-out, margin 100ms ease-out, height 100ms ease-out;
+  background-color: rgba($mainColor, 0.5) !important;
+  border-radius: 20px !important;
+}
+
+// iscroll bar 样式
+.iScrollIndicator {
+  background-color: rgba($mainColor, 0.5) !important;
+}
+/* ########################################## 自定义原生 Chrome 滚动条 END ############################################### */
+
+/* ########################################## 全局 更改 START ############################################### */
+
+.el-loading-spinner svg {
+  margin: 0 auto;
+}
+.stencil_wrap {
+  position: relative;
+  height: 100%;
+  // border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  .x6-widget-stencil-title {
+    display: none;
+  }
+  .x6-widget-stencil {
+    color: #333;
+    background: #ffffff;
+    .node_wrap {
+      box-shadow: none;
+      // border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  .x6-port-body {
+    visibility: hidden;
+  }
+}
+/*
+ * navbar 切换项目
+ */
+.module_check_project {
+  .search_input {
+    margin: 10px 0;
+  }
+  .list_wrapper {
+    width: 100%;
+    max-height: 520px;
+    overflow: auto;
+    .active {
+      background: rgba(24, 144, 255, .8);
+      color: #fff;
+    }
+    li {
+      display: flex;
+      padding: 0 10px;
+      height: 32px;
+      line-height: 32px;
+      cursor: pointer;
+      .col1 {
+        flex: 1 1 100px;
+      }
+      .col2 {
+        flex: auto;
+      }
+      &:hover {
+        background: rgba(24, 144, 255, .2);
+      }
+    }
+  }
+}
+/**
+ * 通用 搜索组 样式 定制
+ */
+.custom_filter_wrapper {
+  .filter_item {
+    margin-bottom: 12px;
+    margin-right: 20px;
+    width: 230px;
+  }
+
+  .custom_style {
+    .el-input__inner {
+      padding-left: 68px;
+    }
+    .el-input__prefix {
+      top: 1px;
+      left: 1px;
+      // padding: 3px 6px 0px 6px;
+      padding: 0 6px;
+      height: calc(100% - 2px);
+      line-height: calc(100% - 1px);
+      // line-height: 27px;
+      border-right: 1px solid #eee;
+      background-color: #F5F7FA;
+      color: #909399;
+      &::after {
+        content: '';
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+/* ########################################## 全局 更改 END ############################################### */

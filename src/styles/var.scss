@@ -1,0 +1,88 @@
+// base color
+$blue:#324157;
+$light-blue:#3A71A8;
+$red:#f31b21;
+$pink: #E65D6E;
+$green: #30B08F;
+$tiffany: #4AB7BD;
+$yellow:#FEC171;
+$panGreen: #30B08F;
+
+$mainColor: #001428;
+$primaryColor: #2d8cf0;
+
+$darkMain: #101014;
+$darkSub: #f8f8f8;
+
+// sidebar
+$menuText:#bbbbbb;
+$menuActiveText:#2d8cf0;
+$subMenuActiveText:#2d8cf0; // https://github.com/ElemeFE/element/issues/12951
+
+$menuBg: rgba(0, 20, 40, 1); // === #001528;
+$menuHover: rgba(52, 52, 52, 0.8);
+
+$subMenuBg:#001428;
+$subMenuHover:rgba(0, 20, 40, 0.1);
+
+$sideBarWidth: 210px;
+
+$gray: #eee;
+$gray-l: #ccc;
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+}
+
+// 背景色配置
+$bg-main: #fff;
+$bg-enable: #eee;
+$bg-tips: #e6f7ff;
+$bg-gray: #999;
+$bg-gray-l: #eee;
+$background-color-black: #3c3f41;
+
+// 边框颜色
+$border-gray: #999;
+$border-color: #ccc;
+$border-gray-light: #eee;
+
+// 字体
+// Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, "\5FAE\8F6F\96C5\9ED1", Arial, sans-serif;
+$font-family: -apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+Oxygen,
+Ubuntu,
+Cantarell,
+"Fira Sans",
+"Droid Sans",
+"Helvetica Neue",
+sans-serif;
+// 字体颜色
+$fontc-main-title: #282828;
+$fontc-dark: #333;
+$fontc-brown: #606266;
+$fontc-gray: #999;
+$fontc-white: #fff;
+
+// 字号
+$fonts-12: 12px;
+$fonts-14: 14px;
+$fonts-16: 16px;
+$fonts-18: 18px;
+$fonts-22: 22px;
+
+
+// 层级
+$zindex-num: 1;

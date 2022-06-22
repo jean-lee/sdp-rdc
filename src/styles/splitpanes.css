@@ -1,0 +1,35 @@
+.splitpanes {
+  background-color: #fff;
+}
+
+.splitpanes__splitter {
+  background-color: #ccc;
+  position: relative;
+}
+
+.splitpanes__splitter:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: opacity 0.4s;
+  background-color: rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  z-index: 1;
+}
+
+.splitpanes__splitter:hover:before {
+  opacity: 1;
+}
+
+.splitpanes--vertical>.splitpanes__splitter:before {
+  left: -6px;
+  right: -6px;
+  height: 100%;
+}
+
+.splitpanes--horizontal>.splitpanes__splitter:before {
+  top: -6px;
+  bottom: -6px;
+  width: 100%;
+}

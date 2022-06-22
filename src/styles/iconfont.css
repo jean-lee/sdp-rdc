@@ -1,0 +1,335 @@
+@font-face {
+  font-family: "iconfont";
+  /* Project id 2927798 */
+  src: url('~@/assets/font/iconfont.woff2?t=1639533354926') format('woff2'),
+    url('~@/assets/font/iconfont.woff?t=1639533354926') format('woff'),
+    url('~@/assets/font/iconfont.ttf?t=1639533354926') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-flowlink:before {
+  content: "\e61c";
+}
+
+.icon-association:before {
+  content: "\e66d";
+}
+
+.icon-lianjie:before {
+  content: "\e61d";
+}
+
+.icon-lianjieliu:before {
+  content: "\e63e";
+}
+
+.icon-code-branch-full:before {
+  content: "\e993";
+}
+
+.icon-play-fill:before {
+  content: "\e72f";
+}
+
+.icon-rejected-order:before {
+  content: "\e7be";
+}
+
+.icon-unlock:before {
+  content: "\e773";
+}
+
+.icon-save-fill:before {
+  content: "\e860";
+}
+
+.icon-shangchuan:before {
+  content: "\e8be";
+}
+
+.icon-Rightbutton:before {
+  content: "\e603";
+}
+
+.icon-code:before {
+  content: "\e6f3";
+}
+
+.icon-play:before {
+  content: "\e701";
+}
+
+.icon-double-arro-right:before {
+  content: "\e74d";
+}
+
+.icon-double-arrow-left:before {
+  content: "\e74e";
+}
+
+.icon-download:before {
+  content: "\e750";
+}
+
+.icon-ellipsis:before {
+  content: "\e751";
+}
+
+.icon-filter:before {
+  content: "\e752";
+}
+
+.icon-history:before {
+  content: "\e753";
+}
+
+.icon-stop:before {
+  content: "\e767";
+}
+
+.icon-switch:before {
+  content: "\e768";
+}
+
+.icon-suspended:before {
+  content: "\e769";
+}
+
+.icon-upload:before {
+  content: "\e76b";
+}
+
+.icon-set:before {
+  content: "\e76c";
+}
+
+.icon-exchangerate:before {
+  content: "\e772";
+}
+
+.icon-integral-fill1:before {
+  content: "\e782";
+}
+
+.icon-add-select:before {
+  content: "\e7b0";
+}
+
+.icon-sami-select:before {
+  content: "\e7b1";
+}
+
+.icon-search:before {
+  content: "\e7b4";
+}
+
+.icon-usercenter:before {
+  content: "\e7b5";
+}
+
+.icon-tradingdata:before {
+  content: "\e7b6";
+}
+
+.icon-shouqi:before {
+  content: "\e7d3";
+}
+
+.icon-zhankai:before {
+  content: "\e7d4";
+}
+
+.icon-save:before {
+  content: "\e762";
+}
+
+.icon-column1:before {
+  content: "\e743";
+}
+
+.icon-product:before {
+  content: "\e7b7";
+}
+
+.icon-QRcode1:before {
+  content: "\e7ba";
+}
+
+.icon-remind:before {
+  content: "\e7c0";
+}
+
+.icon-task-management:before {
+  content: "\e7e1";
+}
+
+.icon-smile:before {
+  content: "\e7e4";
+}
+
+.icon-clock-fill:before {
+  content: "\e81d";
+}
+
+.icon-cry-fill:before {
+  content: "\e829";
+}
+
+.icon-pin-fill:before {
+  content: "\e850";
+}
+
+.icon-falg-fill:before {
+  content: "\e8e0";
+}
+
+.icon-flow:before {
+  content: "\e68a";
+}
+
+.icon-return:before {
+  content: "\e601";
+}
+
+.icon-undo:before {
+  content: "\e612";
+}
+
+.icon-to-front:before {
+  content: "\e7d9";
+}
+
+.icon-ungroup:before {
+  content: "\e7e0";
+}
+
+.icon-fit-canvas:before {
+  content: "\e635";
+}
+
+.icon-zoom-out:before {
+  content: "\e657";
+}
+
+.icon-actual-size:before {
+  content: "\e604";
+}
+
+.icon-zoom-in:before {
+  content: "\e6e3";
+}
+
+.icon-redo:before {
+  content: "\e613";
+}
+
+.icon-to-back:before {
+  content: "\e605";
+}
+
+.icon-group:before {
+  content: "\e616";
+}
+
+.icon-select-nodes:before {
+  content: "\e65a";
+}
+
+.icon-delete:before {
+  content: "\e890";
+}
+
+.icon-java-logo:before {
+  content: "\e614";
+}
+
+.icon-python:before {
+  content: "\e739";
+}
+
+.icon-cloudshellyunminglinghang-copy:before {
+  content: "\ec75";
+}
+
+.icon-csv:before {
+  content: "\e6e0";
+}
+
+.icon-jar:before {
+  content: "\e618";
+}
+
+.icon-run-result:before {
+  content: "\e6a2";
+}
+
+.icon-log:before {
+  content: "\e65b";
+}
+
+.icon-go-logo:before {
+  content: "\e606";
+}
+
+.icon-start-logo:before {
+  content: "\e75e";
+}
+
+.icon-end-logo:before {
+  content: "\e8f5";
+}
+
+.icon-hive-logo:before {
+  content: "\e6f7";
+}
+
+.icon-python-logo:before {
+  content: "\e607";
+}
+
+.icon-vmnode-logo:before {
+  content: "\e637";
+}
+
+.icon-flinkx-logo:before {
+  content: "\e610";
+}
+
+.icon-datax-logo:before {
+  content: "\e61a";
+}
+
+.icon-mysql-logo:before {
+  content: "\e63c";
+}
+
+.icon-r-logo:before {
+  content: "\e7ea";
+}
+
+.icon-realtime-logo:before {
+  content: "\e61e";
+}
+
+.icon-greenplum-logo:before {
+  content: "\e83a";
+}
+
+.icon-postgre-logo:before {
+  content: "\e625";
+}
+
+.icon-impala-logo:before {
+  content: "\e679";
+}
+
+.icon-result:before {
+  content: "\e64f";
+}
